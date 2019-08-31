@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Jornada Acadêmica/Pods-Jornada Acadêmica-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BetterSegmentedControl/BetterSegmentedControl.framework
+${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework
+${BUILT_PRODUCTS_DIR}/SharkORM/SharkORM.framework

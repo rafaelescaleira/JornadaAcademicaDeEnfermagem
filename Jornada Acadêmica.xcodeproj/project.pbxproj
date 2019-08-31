@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C2F1CD923199FFF001F99DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F1CD823199FFF001F99DB /* MainViewController.swift */; };
+		4C2F1CDB2319A00B001F99DB /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F1CDA2319A00B001F99DB /* PersonsViewController.swift */; };
+		4C2F1CDD2319A017001F99DB /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F1CDC2319A017001F99DB /* ScannerViewController.swift */; };
+		4C2F1CDF2319A022001F99DB /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F1CDE2319A022001F99DB /* ExportViewController.swift */; };
+		4CB97B082319B06F006BC7AF /* PersonsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B072319B06F006BC7AF /* PersonsDatabase.swift */; };
+		4CB97B0D2319B1AC006BC7AF /* PersonsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B0C2319B1AC006BC7AF /* PersonsParser.swift */; };
+		4CB97B0F2319B2B3006BC7AF /* jornada.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CB97B0E2319B2B3006BC7AF /* jornada.json */; };
+		4CB97B122319BFE7006BC7AF /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B112319BFE7006BC7AF /* TextMask.swift */; };
+		4CB97B142319F1E9006BC7AF /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B132319F1E9006BC7AF /* CSV.swift */; };
+		4CDCD05223197692000A933A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDCD05123197692000A933A /* AppDelegate.swift */; };
+		4CDCD05923197692000A933A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CDCD05723197692000A933A /* Main.storyboard */; };
+		4CDCD05B23197695000A933A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDCD05A23197695000A933A /* Assets.xcassets */; };
+		4CDCD05E23197695000A933A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CDCD05C23197695000A933A /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C2F1CD823199FFF001F99DB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4C2F1CDA2319A00B001F99DB /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
+		4C2F1CDC2319A017001F99DB /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		4C2F1CDE2319A022001F99DB /* ExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
+		4CB97B072319B06F006BC7AF /* PersonsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDatabase.swift; sourceTree = "<group>"; };
+		4CB97B0C2319B1AC006BC7AF /* PersonsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsParser.swift; sourceTree = "<group>"; };
+		4CB97B0E2319B2B3006BC7AF /* jornada.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jornada.json; sourceTree = "<group>"; };
+		4CB97B112319BFE7006BC7AF /* TextMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMask.swift; sourceTree = "<group>"; };
+		4CB97B132319F1E9006BC7AF /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
+		4CDCD04E23197692000A933A /* Jornada Acadêmica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jornada Acadêmica.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDCD05123197692000A933A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CDCD05823197692000A933A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CDCD05A23197695000A933A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CDCD05D23197695000A933A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CDCD05F23197695000A933A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE09CD240DF7DB77887BA98 /* Pods_Jornada_Acade_mica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jornada_Acade_mica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A45B0AF67B1AA850F662955A /* Pods-Jornada Acadêmica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jornada Acadêmica.release.xcconfig"; path = "Target Support Files/Pods-Jornada Acadêmica/Pods-Jornada Acadêmica.release.xcconfig"; sourceTree = "<group>"; };
+		AE6C37D695F0A6F1A543A7A4 /* Pods-Jornada Acadêmica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jornada Acadêmica.debug.xcconfig"; path = "Target Support Files/Pods-Jornada Acadêmica/Pods-Jornada Acadêmica.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CDCD04B23197692000A933A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C2F1CD723199FE9001F99DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C2F1CD823199FFF001F99DB /* MainViewController.swift */,
+				4C2F1CDA2319A00B001F99DB /* PersonsViewController.swift */,
+				4C2F1CDC2319A017001F99DB /* ScannerViewController.swift */,
+				4C2F1CDE2319A022001F99DB /* ExportViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4CB97B062319B054006BC7AF /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				4CB97B072319B06F006BC7AF /* PersonsDatabase.swift */,
+				4CB97B0C2319B1AC006BC7AF /* PersonsParser.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		4CB97B102319BFD8006BC7AF /* Customizations */ = {
+			isa = PBXGroup;
+			children = (
+				4CB97B112319BFE7006BC7AF /* TextMask.swift */,
+				4CB97B132319F1E9006BC7AF /* CSV.swift */,
+			);
+			path = Customizations;
+			sourceTree = "<group>";
+		};
+		4CDCD04523197692000A933A = {
+			isa = PBXGroup;
+			children = (
+				4CDCD05023197692000A933A /* Jornada Acadêmica */,
+				4CDCD04F23197692000A933A /* Products */,
+				DDE435CD99252F8840903B94 /* Pods */,
+				CF8C21AC9D5FB5632D754D32 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4CDCD04F23197692000A933A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CDCD04E23197692000A933A /* Jornada Acadêmica.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CDCD05023197692000A933A /* Jornada Acadêmica */ = {
+			isa = PBXGroup;
+			children = (
+				4CB97B102319BFD8006BC7AF /* Customizations */,
+				4CB97B062319B054006BC7AF /* Datasource */,
+				4C2F1CD723199FE9001F99DB /* Controllers */,
+				4CDCD05123197692000A933A /* AppDelegate.swift */,
+				4CDCD05723197692000A933A /* Main.storyboard */,
+				4CDCD05A23197695000A933A /* Assets.xcassets */,
+				4CDCD05C23197695000A933A /* LaunchScreen.storyboard */,
+				4CB97B0E2319B2B3006BC7AF /* jornada.json */,
+				4CDCD05F23197695000A933A /* Info.plist */,
+			);
+			path = "Jornada Acadêmica";
+			sourceTree = "<group>";
+		};
+		CF8C21AC9D5FB5632D754D32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FE09CD240DF7DB77887BA98 /* Pods_Jornada_Acade_mica.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDE435CD99252F8840903B94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE6C37D695F0A6F1A543A7A4 /* Pods-Jornada Acadêmica.debug.xcconfig */,
+				A45B0AF67B1AA850F662955A /* Pods-Jornada Acadêmica.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CDCD04D23197692000A933A /* Jornada Acadêmica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CDCD06223197695000A933A /* Build configuration list for PBXNativeTarget "Jornada Acadêmica" */;
+			buildPhases = (
+				A5A1A0A4AD74BCA0EED9B505 /* [CP] Check Pods Manifest.lock */,
+				4CDCD04A23197692000A933A /* Sources */,
+				4CDCD04B23197692000A933A /* Frameworks */,
+				4CDCD04C23197692000A933A /* Resources */,
+				95AE4BE097DC85A95E8A665B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jornada Acadêmica";
+			productName = "Jornada Acadêmica";
+			productReference = 4CDCD04E23197692000A933A /* Jornada Acadêmica.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CDCD04623197692000A933A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Rafael Escaleira";
+				TargetAttributes = {
+					4CDCD04D23197692000A933A = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 4CDCD04923197692000A933A /* Build configuration list for PBXProject "Jornada Acadêmica" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CDCD04523197692000A933A;
+			productRefGroup = 4CDCD04F23197692000A933A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CDCD04D23197692000A933A /* Jornada Acadêmica */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CDCD04C23197692000A933A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDCD05E23197695000A933A /* LaunchScreen.storyboard in Resources */,
+				4CDCD05B23197695000A933A /* Assets.xcassets in Resources */,
+				4CDCD05923197692000A933A /* Main.storyboard in Resources */,
+				4CB97B0F2319B2B3006BC7AF /* jornada.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		95AE4BE097DC85A95E8A665B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jornada Acadêmica/Pods-Jornada Acadêmica-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jornada Acadêmica/Pods-Jornada Acadêmica-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jornada Acadêmica/Pods-Jornada Acadêmica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5A1A0A4AD74BCA0EED9B505 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jornada Acadêmica-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CDCD04A23197692000A933A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CB97B082319B06F006BC7AF /* PersonsDatabase.swift in Sources */,
+				4C2F1CD923199FFF001F99DB /* MainViewController.swift in Sources */,
+				4CB97B142319F1E9006BC7AF /* CSV.swift in Sources */,
+				4CB97B122319BFE7006BC7AF /* TextMask.swift in Sources */,
+				4C2F1CDF2319A022001F99DB /* ExportViewController.swift in Sources */,
+				4CDCD05223197692000A933A /* AppDelegate.swift in Sources */,
+				4CB97B0D2319B1AC006BC7AF /* PersonsParser.swift in Sources */,
+				4C2F1CDD2319A017001F99DB /* ScannerViewController.swift in Sources */,
+				4C2F1CDB2319A00B001F99DB /* PersonsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4CDCD05723197692000A933A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CDCD05823197692000A933A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CDCD05C23197695000A933A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CDCD05D23197695000A933A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CDCD06023197695000A933A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CDCD06123197695000A933A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CDCD06323197695000A933A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE6C37D695F0A6F1A543A7A4 /* Pods-Jornada Acadêmica.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7QLR2PH2X;
+				INFOPLIST_FILE = "Jornada Acadêmica/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.ufms.Jornada-Acade-mica";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CDCD06423197695000A933A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A45B0AF67B1AA850F662955A /* Pods-Jornada Acadêmica.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7QLR2PH2X;
+				INFOPLIST_FILE = "Jornada Acadêmica/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.ufms.Jornada-Acade-mica";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CDCD04923197692000A933A /* Build configuration list for PBXProject "Jornada Acadêmica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDCD06023197695000A933A /* Debug */,
+				4CDCD06123197695000A933A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CDCD06223197695000A933A /* Build configuration list for PBXNativeTarget "Jornada Acadêmica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDCD06323197695000A933A /* Debug */,
+				4CDCD06423197695000A933A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CDCD04623197692000A933A /* Project object */;
+}
