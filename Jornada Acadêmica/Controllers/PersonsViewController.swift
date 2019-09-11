@@ -122,7 +122,7 @@ class PersonsViewController: UIViewController, UISearchBarDelegate {
         
         DispatchQueue.main.async {
             
-            guard let number = URL(string: "https://api.whatsapp.com/send?phone=\(InputTextMask.applyMask(.PHONE, toText: (self.fetchPersons[sender.tag].celular?.replacingOccurrences(of: "(", with: "").replacingOccurrences(of: ")", with: "").replacingOccurrences(of: "-", with: "").replacingOccurrences(of: ".", with: "").replacingOccurrences(of: " ", with: "") ?? "Número Inexistente")))") else { return }
+            guard let number = URL(string: "https://api.whatsapp.com/send?phone=+5567\((self.fetchPersons[sender.tag].celular?.replacingOccurrences(of: "(", with: "").replacingOccurrences(of: ")", with: "").replacingOccurrences(of: "-", with: "").replacingOccurrences(of: ".", with: "").replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "067", with: "").replacingOccurrences(of: "67", with: "") ?? "Número Inexistente"))") else { return }
             UIApplication.shared.open(number)
         }
     }
