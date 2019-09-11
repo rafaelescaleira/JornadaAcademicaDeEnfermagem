@@ -13,26 +13,25 @@ class ExportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
     
     @IBAction func ButtonAction18() {
         
-        let url = CSV.generateCSV(csvText: getCSVText(day: "18"), fileName: "Dia 18")
+        let url = CSV.generateCSV(csvText: getCSVText(day: "18"), fileName: "18.09.2019")
         let activity = UIActivityViewController(activityItems: [url], applicationActivities: [])
         self.present(activity, animated: true, completion: nil)
     }
     
     @IBAction func ButtonAction19() {
         
-        let url = CSV.generateCSV(csvText: getCSVText(day: "19"), fileName: "Dia 19")
+        let url = CSV.generateCSV(csvText: getCSVText(day: "19"), fileName: "19.09.2019")
         let activity = UIActivityViewController(activityItems: [url], applicationActivities: [])
         self.present(activity, animated: true, completion: nil)
     }
     
     @IBAction func ButtonAction20() {
         
-        let url = CSV.generateCSV(csvText: getCSVText(day: "20"), fileName: "Dia 20")
+        let url = CSV.generateCSV(csvText: getCSVText(day: "20"), fileName: "20.09.2019")
         let activity = UIActivityViewController(activityItems: [url], applicationActivities: [])
         self.present(activity, animated: true, completion: nil)
     }

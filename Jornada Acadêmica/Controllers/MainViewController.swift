@@ -15,6 +15,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         if PersonsDatabase.query().count() == 0 { parsePersons() }
+        let persons = PersonsDatabase.query().where("dia='\(18)'").fetch() as? [PersonsDatabase] ?? []
+        
+        for i in persons { print("," + (i.CPF ?? "")) }
     }
     
     @IBAction func exportButtonAction() {

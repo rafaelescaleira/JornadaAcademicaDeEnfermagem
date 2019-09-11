@@ -28,7 +28,7 @@ class PersonsViewController: UIViewController, UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        self.persons = PersonsDatabase.query().where("dia=\(18)").order("nomeCompleto").fetch() as? [PersonsDatabase] ?? []
+        self.persons = PersonsDatabase.query().where("dia=\(18)").fetch() as? [PersonsDatabase] ?? []
         self.fetchPersons = self.persons
         
         self.tableView.reloadData()
@@ -55,7 +55,7 @@ class PersonsViewController: UIViewController, UISearchBarDelegate {
         
         if sender.index == 0 {
             
-            self.persons = PersonsDatabase.query().where("dia=\(18)").order("nomeCompleto").fetch() as? [PersonsDatabase] ?? []
+            self.persons = PersonsDatabase.query().where("dia=\(18)").fetch() as? [PersonsDatabase] ?? []
             self.fetchPersons = self.persons
             
             self.tableView.reloadData()
@@ -64,7 +64,7 @@ class PersonsViewController: UIViewController, UISearchBarDelegate {
         
         else if sender.index == 1 {
             
-            self.persons = PersonsDatabase.query().where("dia=\(19)").order("nomeCompleto").fetch() as? [PersonsDatabase] ?? []
+            self.persons = PersonsDatabase.query().where("dia=\(19)").fetch() as? [PersonsDatabase] ?? []
             self.fetchPersons = self.persons
             
             self.tableView.reloadData()
@@ -73,7 +73,7 @@ class PersonsViewController: UIViewController, UISearchBarDelegate {
         
         else {
             
-            self.persons = PersonsDatabase.query().where("dia=\(20)").order("nomeCompleto").fetch() as? [PersonsDatabase] ?? []
+            self.persons = PersonsDatabase.query().where("dia=\(20)").fetch() as? [PersonsDatabase] ?? []
             self.fetchPersons = self.persons
             
             self.tableView.reloadData()
@@ -148,7 +148,7 @@ public class PersonsTableViewCell: UITableViewCell {
     
     public func setCell(name: String?, cpf: String?, email: String?, state: String?, day: String?) {
         
-        self.nameLabel.text = name?.lowercased().capitalized
+        self.nameLabel.text = name
         self.cpfLabel.text = InputTextMask.applyMask(.CPF, toText: cpf ?? "")
         self.emailLabel.text = email
         self.dayLabel.text = day

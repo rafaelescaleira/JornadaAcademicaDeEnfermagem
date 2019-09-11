@@ -15,7 +15,11 @@ public func parsePersons() {
         guard let path = Bundle.main.path(forResource: "jornada", ofType: "json") else { return }
         let url = URL(fileURLWithPath: path)
         let data = try Data(contentsOf: url, options: .mappedIfSafe)
-        let persons = try JSONDecoder().decode([PersonsModel].self, from: data)
+        var persons = try JSONDecoder().decode([PersonsModel].self, from: data)
+        
+        persons = persons.sorted(by: { (prev, next) -> Bool in
+            return (prev.nomeCompleto?.lowercased().capitalized ?? "") < (next.nomeCompleto?.lowercased().capitalized ?? "")
+        })
         
         for index in 18...20 {
             
@@ -25,7 +29,7 @@ public func parsePersons() {
                     
                     let newPerson = PersonsDatabase()
                     newPerson.email = person.email
-                    newPerson.nomeCompleto = person.nomeCompleto
+                    newPerson.nomeCompleto = person.nomeCompleto?.lowercased().capitalized
                     newPerson.nomeSocial = person.nomeSocial
                     newPerson.CPF = person.CPF
                     newPerson.celular = person.celular

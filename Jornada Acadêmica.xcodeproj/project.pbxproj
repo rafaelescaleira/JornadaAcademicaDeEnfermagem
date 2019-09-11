@@ -13,9 +13,9 @@
 		4C2F1CDF2319A022001F99DB /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F1CDE2319A022001F99DB /* ExportViewController.swift */; };
 		4CB97B082319B06F006BC7AF /* PersonsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B072319B06F006BC7AF /* PersonsDatabase.swift */; };
 		4CB97B0D2319B1AC006BC7AF /* PersonsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B0C2319B1AC006BC7AF /* PersonsParser.swift */; };
-		4CB97B0F2319B2B3006BC7AF /* jornada.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CB97B0E2319B2B3006BC7AF /* jornada.json */; };
 		4CB97B122319BFE7006BC7AF /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B112319BFE7006BC7AF /* TextMask.swift */; };
 		4CB97B142319F1E9006BC7AF /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B132319F1E9006BC7AF /* CSV.swift */; };
+		4CC92550232880E400BAB849 /* jornada.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9254F232880E400BAB849 /* jornada.json */; };
 		4CDCD05223197692000A933A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDCD05123197692000A933A /* AppDelegate.swift */; };
 		4CDCD05923197692000A933A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CDCD05723197692000A933A /* Main.storyboard */; };
 		4CDCD05B23197695000A933A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDCD05A23197695000A933A /* Assets.xcassets */; };
@@ -29,9 +29,9 @@
 		4C2F1CDE2319A022001F99DB /* ExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
 		4CB97B072319B06F006BC7AF /* PersonsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDatabase.swift; sourceTree = "<group>"; };
 		4CB97B0C2319B1AC006BC7AF /* PersonsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsParser.swift; sourceTree = "<group>"; };
-		4CB97B0E2319B2B3006BC7AF /* jornada.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jornada.json; sourceTree = "<group>"; };
 		4CB97B112319BFE7006BC7AF /* TextMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMask.swift; sourceTree = "<group>"; };
 		4CB97B132319F1E9006BC7AF /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
+		4CC9254F232880E400BAB849 /* jornada.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jornada.json; sourceTree = "<group>"; };
 		4CDCD04E23197692000A933A /* Jornada Acadêmica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jornada Acadêmica.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDCD05123197692000A933A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CDCD05823197692000A933A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				4CDCD05723197692000A933A /* Main.storyboard */,
 				4CDCD05A23197695000A933A /* Assets.xcassets */,
 				4CDCD05C23197695000A933A /* LaunchScreen.storyboard */,
-				4CB97B0E2319B2B3006BC7AF /* jornada.json */,
+				4CC9254F232880E400BAB849 /* jornada.json */,
 				4CDCD05F23197695000A933A /* Info.plist */,
 			);
 			path = "Jornada Acadêmica";
@@ -197,7 +197,7 @@
 				4CDCD05E23197695000A933A /* LaunchScreen.storyboard in Resources */,
 				4CDCD05B23197695000A933A /* Assets.xcassets in Resources */,
 				4CDCD05923197692000A933A /* Main.storyboard in Resources */,
-				4CB97B0F2319B2B3006BC7AF /* jornada.json in Resources */,
+				4CC92550232880E400BAB849 /* jornada.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
