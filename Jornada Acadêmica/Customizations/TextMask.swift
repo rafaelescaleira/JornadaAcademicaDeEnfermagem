@@ -14,12 +14,13 @@ public enum MaskType: String {
     case CNPJ = "**.***.***/****-**"
     case birthday = "**/**/****"
     case RGA = "****.****.***-*"
+    case PHONE = "(**)*****-****"
 }
 
 class InputTextMask {
     
     private static func stringFilterWithCharacter(_ char: Character) -> Bool {
-        return char != "." && char != "/" && char != "-"
+        return char != "." && char != "/" && char != "-" && char != "(" && char != ")"
     }
     
     private static func transformStringToFilteredCharCollection(_ text: String) -> [Character] {

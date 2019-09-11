@@ -108,6 +108,24 @@ class PersonsViewController: UIViewController, UISearchBarDelegate {
         
         self.tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .middle)
     }
+    
+    @objc func callAction(_ sender: UIButton) {
+        
+        DispatchQueue.main.async {
+            
+            guard let number = URL(string: "tel://" + InputTextMask.applyMask(.PHONE, toText: (self.fetchPersons[sender.tag].celular?.replacingOccurrences(of: "(", with: "").replacingOccurrences(of: ")", with: "").replacingOccurrences(of: "-", with: "").replacingOccurrences(of: ".", with: "").replacingOccurrences(of: " ", with: "") ?? "Número Inexistente"))) else { return }
+            UIApplication.shared.open(number)
+        }
+    }
+    
+    @objc func messageAction(_ sender: UIButton) {
+        
+        DispatchQueue.main.async {
+            
+            guard let number = URL(string: "https://api.whatsapp.com/send?phone=\(InputTextMask.applyMask(.PHONE, toText: (self.fetchPersons[sender.tag].celular?.replacingOccurrences(of: "(", with: "").replacingOccurrences(of: ")", with: "").replacingOccurrences(of: "-", with: "").replacingOccurrences(of: ".", with: "").replacingOccurrences(of: " ", with: "") ?? "Número Inexistente")))") else { return }
+            UIApplication.shared.open(number)
+        }
+    }
 }
 
 extension PersonsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -125,12 +143,16 @@ extension PersonsViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.presenteButton.tag = indexPath.row
         cell.faltaButton.tag = indexPath.row
+        cell.callButton.tag = indexPath.row
+        cell.messageButton.tag = indexPath.row
         
         cell.presenteButton.addTarget(self, action: #selector(self.presenteButtonAction(_:)), for: .touchUpInside)
         cell.faltaButton.addTarget(self, action: #selector(self.faltaButtonAction(_:)), for: .touchUpInside)
+        cell.callButton.addTarget(self, action: #selector(self.callAction(_:)), for: .touchUpInside)
+        cell.messageButton.addTarget(self, action: #selector(self.messageAction(_:)), for: .touchUpInside)
         
         let item = self.fetchPersons[indexPath.row]
-        cell.setCell(name: item.nomeCompleto, cpf: item.CPF, email: item.email, state: item.frequencia, day: item.dia)
+        cell.setCell(name: item.nomeCompleto, cpf: item.CPF, email: item.email, state: item.frequencia, day: item.dia, course: item.cursoProf, institutional: item.instituicao)
         
         return cell
     }
@@ -142,16 +164,22 @@ public class PersonsTableViewCell: UITableViewCell {
     @IBOutlet weak var cpfLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var courseLabel: UILabel!
+    @IBOutlet weak var institutionalLabel: UILabel!
     
     @IBOutlet weak var presenteButton: UIButton!
     @IBOutlet weak var faltaButton: UIButton!
+    @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var messageButton: UIButton!
     
-    public func setCell(name: String?, cpf: String?, email: String?, state: String?, day: String?) {
+    public func setCell(name: String?, cpf: String?, email: String?, state: String?, day: String?, course: String?, institutional: String?) {
         
         self.nameLabel.text = name
         self.cpfLabel.text = InputTextMask.applyMask(.CPF, toText: cpf ?? "")
         self.emailLabel.text = email
         self.dayLabel.text = day
+        self.courseLabel.text = course?.lowercased().capitalized
+        self.institutionalLabel.text = institutional?.lowercased().capitalized
         
         if state == "Ausente" {
             
@@ -173,7 +201,7 @@ public class PersonsTableViewCell: UITableViewCell {
             self.presenteButton.setImage(presenteImage, for: .normal)
             self.faltaButton.setImage(ausenteImage, for: .normal)
             
-            self.presenteButton.tintColor = #colorLiteral(red: 0.3831424117, green: 0.7302771807, blue: 0.2767491341, alpha: 1)
+            self.presenteButton.tintColor = #colorLiteral(red: 0.3843137255, green: 0.7294117647, blue: 0.2784313725, alpha: 1)
             self.faltaButton.tintColor = .white
         }
     }
