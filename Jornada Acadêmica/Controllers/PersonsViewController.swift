@@ -8,8 +8,9 @@
 
 import UIKit
 import BetterSegmentedControl
+import MessageUI
 
-class PersonsViewController: UIViewController, UISearchBarDelegate {
+class PersonsViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -23,7 +24,10 @@ class PersonsViewController: UIViewController, UISearchBarDelegate {
 
         self.searchBar.delegate = self
         self.segmentedControl.segments = LabelSegment.segments(withTitles: ["Dia 18", "Dia 19", "Dia 20"], numberOfLines: 3, normalBackgroundColor: segmentedControl.backgroundColor, normalFont: .systemFont(ofSize: 17), normalTextColor: .white, selectedBackgroundColor: segmentedControl.indicatorViewBackgroundColor, selectedFont: .boldSystemFont(ofSize: 17), selectedTextColor: .white)
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -126,6 +130,30 @@ class PersonsViewController: UIViewController, UISearchBarDelegate {
             UIApplication.shared.open(number)
         }
     }
+    
+    @objc func mailAction(_ sender: UIButton) {
+        
+        if MFMailComposeViewController.canSendMail() {
+            
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([self.fetchPersons[sender.tag].email ?? ""])
+
+            present(mail, animated: true)
+        }
+        
+        else {
+            
+            let alert = UIAlertController(title: "Mail services are not available", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        controller.dismiss(animated: true)
+    }
 }
 
 extension PersonsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -145,11 +173,13 @@ extension PersonsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.faltaButton.tag = indexPath.row
         cell.callButton.tag = indexPath.row
         cell.messageButton.tag = indexPath.row
+        cell.mailButton.tag = indexPath.row
         
         cell.presenteButton.addTarget(self, action: #selector(self.presenteButtonAction(_:)), for: .touchUpInside)
         cell.faltaButton.addTarget(self, action: #selector(self.faltaButtonAction(_:)), for: .touchUpInside)
         cell.callButton.addTarget(self, action: #selector(self.callAction(_:)), for: .touchUpInside)
         cell.messageButton.addTarget(self, action: #selector(self.messageAction(_:)), for: .touchUpInside)
+        cell.mailButton.addTarget(self, action: #selector(self.mailAction(_:)), for: .touchUpInside)
         
         let item = self.fetchPersons[indexPath.row]
         cell.setCell(name: item.nomeCompleto, cpf: item.CPF, email: item.email, state: item.frequencia, day: item.dia, course: item.cursoProf, institutional: item.instituicao)
@@ -171,6 +201,7 @@ public class PersonsTableViewCell: UITableViewCell {
     @IBOutlet weak var faltaButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var messageButton: UIButton!
+    @IBOutlet weak var mailButton: UIButton!
     
     public func setCell(name: String?, cpf: String?, email: String?, state: String?, day: String?, course: String?, institutional: String?) {
         

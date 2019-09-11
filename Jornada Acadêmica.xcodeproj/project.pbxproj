@@ -11,6 +11,7 @@
 		4C2F1CDB2319A00B001F99DB /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F1CDA2319A00B001F99DB /* PersonsViewController.swift */; };
 		4C2F1CDD2319A017001F99DB /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F1CDC2319A017001F99DB /* ScannerViewController.swift */; };
 		4C2F1CDF2319A022001F99DB /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F1CDE2319A022001F99DB /* ExportViewController.swift */; };
+		4C9158B22329299E0047C256 /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9158B12329299E0047C256 /* SendEmailViewController.swift */; };
 		4CB97B082319B06F006BC7AF /* PersonsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B072319B06F006BC7AF /* PersonsDatabase.swift */; };
 		4CB97B0D2319B1AC006BC7AF /* PersonsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B0C2319B1AC006BC7AF /* PersonsParser.swift */; };
 		4CB97B122319BFE7006BC7AF /* TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB97B112319BFE7006BC7AF /* TextMask.swift */; };
@@ -27,6 +28,8 @@
 		4C2F1CDA2319A00B001F99DB /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
 		4C2F1CDC2319A017001F99DB /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		4C2F1CDE2319A022001F99DB /* ExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
+		4C9158B12329299E0047C256 /* SendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailViewController.swift; sourceTree = "<group>"; };
+		4C9158B32329357F0047C256 /* Jornada Acadêmica.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Jornada Acadêmica.entitlements"; sourceTree = "<group>"; };
 		4CB97B072319B06F006BC7AF /* PersonsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDatabase.swift; sourceTree = "<group>"; };
 		4CB97B0C2319B1AC006BC7AF /* PersonsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsParser.swift; sourceTree = "<group>"; };
 		4CB97B112319BFE7006BC7AF /* TextMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMask.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 				4C2F1CDA2319A00B001F99DB /* PersonsViewController.swift */,
 				4C2F1CDC2319A017001F99DB /* ScannerViewController.swift */,
 				4C2F1CDE2319A022001F99DB /* ExportViewController.swift */,
+				4C9158B12329299E0047C256 /* SendEmailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -104,6 +108,7 @@
 		4CDCD05023197692000A933A /* Jornada Acadêmica */ = {
 			isa = PBXGroup;
 			children = (
+				4C9158B32329357F0047C256 /* Jornada Acadêmica.entitlements */,
 				4CB97B102319BFD8006BC7AF /* Customizations */,
 				4CB97B062319B054006BC7AF /* Datasource */,
 				4C2F1CD723199FE9001F99DB /* Controllers */,
@@ -255,6 +260,7 @@
 				4CB97B142319F1E9006BC7AF /* CSV.swift in Sources */,
 				4CB97B122319BFE7006BC7AF /* TextMask.swift in Sources */,
 				4C2F1CDF2319A022001F99DB /* ExportViewController.swift in Sources */,
+				4C9158B22329299E0047C256 /* SendEmailViewController.swift in Sources */,
 				4CDCD05223197692000A933A /* AppDelegate.swift in Sources */,
 				4CB97B0D2319B1AC006BC7AF /* PersonsParser.swift in Sources */,
 				4C2F1CDD2319A017001F99DB /* ScannerViewController.swift in Sources */,
@@ -403,7 +409,9 @@
 			baseConfigurationReference = AE6C37D695F0A6F1A543A7A4 /* Pods-Jornada Acadêmica.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Jornada Acadêmica/Jornada Acadêmica.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = Q7QLR2PH2X;
 				INFOPLIST_FILE = "Jornada Acadêmica/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -413,6 +421,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufms.Jornada-Acade-mica";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -423,7 +432,9 @@
 			baseConfigurationReference = A45B0AF67B1AA850F662955A /* Pods-Jornada Acadêmica.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Jornada Acadêmica/Jornada Acadêmica.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = Q7QLR2PH2X;
 				INFOPLIST_FILE = "Jornada Acadêmica/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -433,6 +444,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufms.Jornada-Acade-mica";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

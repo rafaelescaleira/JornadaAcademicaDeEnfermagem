@@ -18,7 +18,7 @@ public func parsePersons() {
         var persons = try JSONDecoder().decode([PersonsModel].self, from: data)
         
         persons = persons.sorted(by: { (prev, next) -> Bool in
-            return (prev.CPF?.lowercased().capitalized ?? "") < (next.CPF?.lowercased().capitalized ?? "")
+            return (prev.nomeCompleto?.lowercased().capitalized ?? "") < (next.nomeCompleto?.lowercased().capitalized ?? "")
         })
         
         for index in 18...20 {

@@ -15,6 +15,8 @@ class ExportViewController: UIViewController {
 
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
     @IBAction func ButtonAction18() {
         
         let url = CSV.generateCSV(csvText: getCSVText(day: "18"), fileName: "18.09.2019")

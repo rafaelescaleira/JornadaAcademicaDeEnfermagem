@@ -75,9 +75,17 @@ class ScannerViewController: UIViewController {
         self.stateButton.tintColor = #colorLiteral(red: 0.3831424117, green: 0.7302771807, blue: 0.2767491341, alpha: 1)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
     @IBAction func backButtonAction(_ sender: Any) {
         
         DispatchQueue.main.async { self.dismiss(animated: true, completion: nil) }
+    }
+    
+    @IBAction func stopButtonAction(_ sender: Any) {
+        
+        self.captureSession.stopRunning()
+        UIView.animate(withDuration: 0.4) { self.stopCameraView.alpha = 1 }
     }
     
     @IBAction func segmentedControlAction(_ sender: BetterSegmentedControl) {

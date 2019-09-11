@@ -15,10 +15,12 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         if PersonsDatabase.query().count() == 0 { parsePersons() }
-        let persons = PersonsDatabase.query().where("dia='\(18)'").fetch() as? [PersonsDatabase] ?? []
-        
-        for i in persons { print("," + (i.CPF ?? "")) }
+//        let persons = PersonsDatabase.query().where("dia='\(18)'").fetch() as? [PersonsDatabase] ?? []
+//        
+//        for i in persons { print("," + (i.CPF ?? "")) }
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
     @IBAction func exportButtonAction() {
         
@@ -33,7 +35,7 @@ class MainViewController: UIViewController {
                 controller.transitioningDelegate = transitionDelegate
                 controller.modalPresentationStyle = .custom
                 controller.modalPresentationCapturesStatusBarAppearance = true
-                transitionDelegate.customHeight = 200
+                transitionDelegate.customHeight = 230
                 transitionDelegate.showIndicator = false
                 transitionDelegate.showCloseButton = true
                 
@@ -76,6 +78,28 @@ class MainViewController: UIViewController {
                 controller.transitioningDelegate = transitionDelegate
                 controller.modalPresentationStyle = .custom
                 controller.modalPresentationCapturesStatusBarAppearance = true
+                transitionDelegate.showIndicator = false
+                transitionDelegate.showCloseButton = true
+                
+                self.present(controller, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func mailButtonAction(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "SendEmailViewController") as? SendEmailViewController else { return }
+        
+        DispatchQueue.global(qos: .background).sync {
+            
+            DispatchQueue.main.async {
+                
+                let transitionDelegate = SPStorkTransitioningDelegate()
+                controller.transitioningDelegate = transitionDelegate
+                controller.modalPresentationStyle = .custom
+                controller.modalPresentationCapturesStatusBarAppearance = true
+                transitionDelegate.customHeight = 290
                 transitionDelegate.showIndicator = false
                 transitionDelegate.showCloseButton = true
                 
